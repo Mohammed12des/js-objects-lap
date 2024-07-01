@@ -91,9 +91,9 @@ Exercise 8
 
 Solve Exercise 8 here:
 */
-for (let i = 0; i < party.length; i++) {
-  console.log(party[i].name);
-}
+game.party.forEach(player=>{
+  console.log(player.name);
+});
 /*
 Exercise 9
 1. Can you print out all the starter Pokémon from the `pokemon` array?
@@ -102,9 +102,11 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
-for(let i=0;pokemon[i].starter==true;i++){
-    console.log(pokemon[i].name);
-}
+pokemon.forEach( pokemon => {
+  if(pokemon.starter){
+      console.log(pokemon.name)
+  }
+});
 /*
 Exercise 10
 1. Add a method called catchPokemon to the game object. This method should:
